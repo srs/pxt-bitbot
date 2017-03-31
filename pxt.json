@@ -4,7 +4,8 @@
   "description": "A BitBot package for pxt-microbit",
   "license": "Apache",
   "dependencies": {
-    "core": "*"
+    "core": "*",
+    "neopixel": "github:microsoft/pxt-neopixel#v0.3.2"
   },
   "files": [
     "README.md",
