@@ -1,4 +1,4 @@
-# BitBit Package for Microsoft PXT
+# BitBot Package for Microsoft PXT
 
 This library provides a Microsoft PXT package for BitBot, see
 https://4tronix.co.uk/bitbot/.
