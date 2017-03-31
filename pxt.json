@@ -1,20 +1,19 @@
 {
-  "name": "bitbot",
-  "version": "0.1.0",
-  "description": "A BitBot package for pxt-microbit",
-  "license": "Apache",
-  "dependencies": {
-    "core": "*",
-    "neopixel": "github:microsoft/pxt-neopixel#v0.3.2"
-  },
-  "files": [
-    "README.md",
-    "main.ts"
-  ],
-  "testFiles": [
-    "tests.ts"
-  ],
-  "yotta": {
-  },
-  "public": true
+    "name": "bitbot",
+    "version": "0.1.0",
+    "description": "A BitBot package for pxt-microbit",
+    "license": "Apache",
+    "dependencies": {
+        "core": "*",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.3.2"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+    ],
+    "yotta": {},
+    "public": true
 }
