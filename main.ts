@@ -2,7 +2,7 @@
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc11 icon="\uf1b9"
+//% weight=10 color=#0fbc11 icon="\uf1b9"
 namespace bitbot {
 
     let neoStrip: neopixel.Strip;
@@ -43,6 +43,7 @@ namespace bitbot {
      * Return a neo pixel strip.
      */
     //% blockId="bitbot_neo" block="neo strip"
+    //% weight=5
     export function neo(): neopixel.Strip {
         if (!neoStrip) {
             neoStrip = neopixel.create(DigitalPin.P13, 12, NeoPixelMode.RGB)
@@ -56,6 +57,7 @@ namespace bitbot {
       *
       * @param motor motor to drive.
       * @param speed speed of motor
+      //% weight=100
       */
     //% blockId="bitbot_motor" block="drive motor %motor|speed %speed"
     export function motor(motor: Motor, speed: number): void {
@@ -91,6 +93,7 @@ namespace bitbot {
       * @param flag Flag to set (0) for off and (1) for on.
       */
     //% blockId="bitbot_buzz" block="buzz sound %flag"
+    //% weight=95
     export function buzz(flag: number): void {
         pins.digitalWritePin(DigitalPin.P14, flag === 0 ? 0 : 1);
     }
@@ -101,6 +104,7 @@ namespace bitbot {
       * @param sensor Line sensor to read.
       */
     //% blockId="bitbot_read_line" block="read line sensor %sensor"
+    //% weight=90
     export function readLine(sensor: LineSensor): number {
         if (sensor == LineSensor.Left) {
             return pins.digitalReadPin(DigitalPin.P11);
@@ -115,6 +119,7 @@ namespace bitbot {
       * @param sensor Light sensor to read.
       */
     //% blockId="bitbot_read_light" block="read light sensor %sensor"
+    //% weight=90
     export function readLight(sensor: LightSensor): number {
         if (sensor == LightSensor.Left) {
             pins.digitalWritePin(DigitalPin.P16, 0);
@@ -131,6 +136,7 @@ namespace bitbot {
       * @param rgb RGB color of the LED
       */
     //% blockId="bitbot_neo_show_color" block="show color %rgb=neopixel_colors"
+    //% weight=80
     export function neoShowColor(rgb: number) {
         neo().showColor(rgb);
     }
@@ -139,6 +145,7 @@ namespace bitbot {
       * Show leds.
       */
     //% blockId="bitbot_neo_show" block="show leds"
+    //% weight=76
     export function neoShow(): void {
         neo().show();
     }
@@ -147,6 +154,7 @@ namespace bitbot {
       * Clear leds.
       */
     //% blockId="bitbot_neo_clear" block="clear leds"
+    //% weight=75
     export function neoClear(): void {
         neo().clear();
     }
@@ -155,6 +163,7 @@ namespace bitbot {
       * Shows a rainbow pattern on all LEDs.
       */
     //% blockId="bitbot_neo_show_rainbow" block="show led rainbow"
+    //% weight=70
     export function neoShowRainbow(): void {
         neo().showRainbow(1, 360);
     }
@@ -163,6 +172,7 @@ namespace bitbot {
      * Shift LEDs forward and clear with zeros.
      */
     //% blockId="bitbot_neo_shift" block="shift led pixels"
+    //% weight=66
     export function neoShift(): void {
         neo().shift(1);
     }
@@ -171,6 +181,7 @@ namespace bitbot {
      * Rotate LEDs forward.
      */
     //% blockId="bitbot_neo_rotate" block="rotate led pixels"
+    //% weight=65
     export function neoRotate(): void {
         neo().rotate(1);
     }
@@ -181,6 +192,7 @@ namespace bitbot {
      * @param brightness a measure of LED brightness in 0-255. eg: 255
      */
     //% blockId="bitbot_neo_brightness" block="set led brightness %brightness"
+    //% weight=10
     export function neoBrightness(brightness: number): void {
         neo().setBrigthness(brightness);
     }
