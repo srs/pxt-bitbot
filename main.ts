@@ -124,14 +124,53 @@ namespace bitbot {
         neoStrip.showColor(rgb);
     }
 
+    /**
+      * Show leds.
+      */
+    //% blockId="bitbot_neo_show" block="show leds"
+    export function neoShow(): void {
+        neoStrip.show();
+    }
 
-    // neoShow
-    // neoClear
-    // neoShowRainbow
-    // neoShift
-    // neoRotate
-    // neoSetBrightness
-    //
+    /**
+      * Clear leds.
+      */
+    //% blockId="bitbot_neo_clear" block="clear leds"
+    export function neoClear(): void {
+        neoStrip.clear();
+    }
 
+    /**
+      * Shows a rainbow pattern on all LEDs.
+      */
+    //% blockId="bitbot_neo_show_rainbow" block="show led rainbow"
+    export function neoShowRainbow(): void {
+        neoStrip.showRainbow(1, 360);
+    }
 
+    /**
+     * Shift LEDs forward and clear with zeros.
+     */
+    //% blockId="bitbot_neo_shift" block="shift led pixels"
+    export function neoShift(): void {
+        neoStrip.shift(1);
+    }
+
+    /**
+     * Rotate LEDs forward.
+     */
+    //% blockId="bitbot_neo_rotate" block="rotate led pixels"
+    export function neoRotate(): void {
+        neoStrip.rotate(1);
+    }
+
+    /**
+     * Set the brightness of the strip.
+     *
+     * @param brightness a measure of LED brightness in 0-255. eg: 255
+     */
+    //% blockId="bitbot_neo_brightness" block="set led brightness %brightness"
+    export function neoBrightness(brightness: number): void {
+        neoStrip.setBrigthness(brightness);
+    }
 }
