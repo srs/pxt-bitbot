@@ -104,7 +104,7 @@ namespace bitbot {
       * @param sensor Light sensor to read.
       */
     //% blockId="bitbot_read_light" block="read light sensor %sensor"
-    export function readLine(sensor: LightSensor): number {
+    export function readLight(sensor: LightSensor): number {
         if (line == LightSensor.Left) {
             pins.digitalWritePin(DigitalPin.P16, 0);
             return pins.analogReadPin(AnalogPin.P2);
