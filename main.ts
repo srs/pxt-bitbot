@@ -25,6 +25,14 @@ namespace bitbot {
     }
 
     /**
+      * Enumeration of light sensors.
+      */
+    export enum LightSensor {
+        Left,
+        Right
+    }
+
+    /**
      * Return a neo pixel strip.
      */
     //% blockId="bitbot_neo" block="neo strip"
@@ -79,14 +87,30 @@ namespace bitbot {
     /**
       * Read line sensor.
       *
-      * @param line Line sensor to read.
+      * @param sensor Line sensor to read.
       */
-    //% blockId="bitbot_read_line" block="read line sensor %line"
-    export function readLine(line: LineSensor): number {
-        if (line == LineSensor.Left) {
+    //% blockId="bitbot_read_line" block="read line sensor %sensor"
+    export function readLine(sensor: LineSensor): number {
+        if (sensor == LineSensor.Left) {
             return pins.digitalReadPin(DigitalPin.P11);
         } else {
             return pins.digitalReadPin(DigitalPin.P5);
+        }
+    }
+
+    /**
+      * Read light sensor.
+      *
+      * @param sensor Light sensor to read.
+      */
+    //% blockId="bitbot_read_light" block="read light sensor %sensor"
+    export function readLine(sensor: LightSensor): number {
+        if (line == LightSensor.Left) {
+            pins.digitalWritePin(DigitalPin.P16, 0);
+            return pins.analogReadPin(AnalogPin.P2);
+        } else {
+            pins.digitalWritePin(DigitalPin.P16, 1);
+            return pins.analogReadPin(AnalogPin.P2);
         }
     }
 
