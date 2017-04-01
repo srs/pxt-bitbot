@@ -105,7 +105,7 @@ namespace bitbot {
       */
     //% blockId="bitbot_read_light" block="read light sensor %sensor"
     export function readLight(sensor: LightSensor): number {
-        if (line == LightSensor.Left) {
+        if (sensor == LightSensor.Left) {
             pins.digitalWritePin(DigitalPin.P16, 0);
             return pins.analogReadPin(AnalogPin.P2);
         } else {
