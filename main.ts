@@ -1,29 +1,28 @@
 
 /**
-  * Enumeration of motors.
-  */
-enum Motor {
-    Left,
-    Right,
-    All
-}
-
-/**
-  * Enumeration of line sensors.
-  */
-enum LineSensor {
-    Left,
-    Right
-}
-
-
-/**
  * Custom blocks
  */
 //% weight=100 color=#0fbc11 icon="\uf1b9"
 namespace bitbot {
 
     let neoStrip: neopixel.Strip = neopixel.create(DigitalPin.P13, 12, NeoPixelMode.RGB);
+
+    /**
+      * Enumeration of motors.
+      */
+    export enum Motor {
+        Left,
+        Right,
+        All
+    }
+
+    /**
+      * Enumeration of line sensors.
+      */
+    export enum LineSensor {
+        Left,
+        Right
+    }
 
     /**
      * Return a neo pixel strip.
