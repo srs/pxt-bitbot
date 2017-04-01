@@ -5,7 +5,7 @@
 //% weight=100 color=#0fbc11 icon="\uf1b9"
 namespace bitbot {
 
-    let neoStrip: neopixel.Strip = neopixel.create(DigitalPin.P13, 12, NeoPixelMode.RGB);
+    let neoStrip: neopixel.Strip;
 
     /**
       * Enumeration of motors.
@@ -44,6 +44,10 @@ namespace bitbot {
      */
     //% blockId="bitbot_neo" block="neo strip"
     export function neo(): neopixel.Strip {
+        if (!neoStrip) {
+            neoStrip = neopixel.create(DigitalPin.P13, 12, NeoPixelMode.RGB)
+        }
+
         return neoStrip;
     }
 
@@ -128,7 +132,7 @@ namespace bitbot {
       */
     //% blockId="bitbot_neo_show_color" block="show color %rgb=neopixel_colors"
     export function neoShowColor(rgb: number) {
-        neoStrip.showColor(rgb);
+        neo().showColor(rgb);
     }
 
     /**
@@ -136,7 +140,7 @@ namespace bitbot {
       */
     //% blockId="bitbot_neo_show" block="show leds"
     export function neoShow(): void {
-        neoStrip.show();
+        neo().show();
     }
 
     /**
@@ -144,7 +148,7 @@ namespace bitbot {
       */
     //% blockId="bitbot_neo_clear" block="clear leds"
     export function neoClear(): void {
-        neoStrip.clear();
+        neo().clear();
     }
 
     /**
@@ -152,7 +156,7 @@ namespace bitbot {
       */
     //% blockId="bitbot_neo_show_rainbow" block="show led rainbow"
     export function neoShowRainbow(): void {
-        neoStrip.showRainbow(1, 360);
+        neo().showRainbow(1, 360);
     }
 
     /**
@@ -160,7 +164,7 @@ namespace bitbot {
      */
     //% blockId="bitbot_neo_shift" block="shift led pixels"
     export function neoShift(): void {
-        neoStrip.shift(1);
+        neo().shift(1);
     }
 
     /**
@@ -168,7 +172,7 @@ namespace bitbot {
      */
     //% blockId="bitbot_neo_rotate" block="rotate led pixels"
     export function neoRotate(): void {
-        neoStrip.rotate(1);
+        neo().rotate(1);
     }
 
     /**
@@ -178,6 +182,6 @@ namespace bitbot {
      */
     //% blockId="bitbot_neo_brightness" block="set led brightness %brightness"
     export function neoBrightness(brightness: number): void {
-        neoStrip.setBrigthness(brightness);
+        neo().setBrigthness(brightness);
     }
 }
