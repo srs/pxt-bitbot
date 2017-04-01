@@ -11,8 +11,11 @@ namespace bitbot {
       * Enumeration of motors.
       */
     export enum Motor {
+        //% block="left"
         Left,
+        //% block="right"
         Right,
+        //% block="all"
         All
     }
 
@@ -20,7 +23,9 @@ namespace bitbot {
       * Enumeration of line sensors.
       */
     export enum LineSensor {
+        //% block="left"
         Left,
+        //% block="right"
         Right
     }
 
@@ -28,7 +33,9 @@ namespace bitbot {
       * Enumeration of light sensors.
       */
     export enum LightSensor {
+        //% block="left"
         Left,
+        //% block="right"
         Right
     }
 
