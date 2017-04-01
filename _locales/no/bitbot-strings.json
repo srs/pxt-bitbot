@@ -1,0 +1,21 @@
+{
+  "bitbot.Motor.Left|block": "venstre",
+  "bitbot.Motor.Right|block": "høyre",
+  "bitbot.Motor.All|block": "alle",
+  "bitbot.LineSensor.Left|block": "venstre",
+  "bitbot.LineSensor.Right|block": "høyre",
+  "bitbot.LightSensor.Left|block": "venstre",
+  "bitbot.LightSensor.Right|block": "høyre",
+  "bitbot.neo|block": "neo stripe",
+  "bitbot.motor|block": "kjør motor %motor|hastighet %speed",
+  "bitbot.buzz|block": "buzz lyd %flag",
+  "bitbot.readLine|block": "les linje-sensor %sensor",
+  "bitbot.readLight|block": "les lys-sensor %sensor",
+  "bitbot.neoShowColor|block": "vis farge %rgb=neopixel_colors",
+  "bitbot.neoShow|block": "vis lysdioder",
+  "bitbot.neoClear|block": "slå av lysdioder",
+  "bitbot.neoShowRainbow|block": "vis lysdioder i regnbue",
+  "bitbot.neoShift|block": "skift lysdioder",
+  "bitbot.neoRotate|block": "roter lysdioder",
+  "bitbot.neoBrightness|block": "sett styrke på lysdioder %brightness"
+}
