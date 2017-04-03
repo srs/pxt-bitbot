@@ -133,10 +133,22 @@ namespace bitbot {
       *
       * @param rgb RGB color of the LED
       */
-    //% blockId="bitbot_neo_show_color" block="show color %rgb=neopixel_colors"
+    //% blockId="bitbot_neo_show_color" block="show color to %rgb=neopixel_colors"
     //% weight=80
     export function neoShowColor(rgb: number) {
         neo().showColor(rgb);
+    }
+
+    /**
+     * Set LED to a given color (range 0-255 for r, g, b).
+     *
+     * @param offset position of the NeoPixel in the strip
+     * @param rgb RGB color of the LED
+     */
+     //% blockId="bitbot_neo_set_pixel_color" block="set pixel color at %offset|to %rgb=neopixel_colors"
+     //% weight=80
+    export function neoSetPixelColor(offset: number, rgb: number): void {
+      neo().setPixelRGB(offset, rgb);
     }
 
     /**

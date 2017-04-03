@@ -12,6 +12,7 @@
   "bitbot.readLine|block": "les linje-sensor %sensor",
   "bitbot.readLight|block": "les lys-sensor %sensor",
   "bitbot.neoShowColor|block": "vis farge %rgb=neopixel_colors",
+  "bitbot.neoSetPixelColor|block": "vis lysdiode %offset|farge %rgb=neopixel_colors",
   "bitbot.neoShow|block": "vis lysdioder",
   "bitbot.neoClear|block": "slå av lysdioder",
   "bitbot.neoShowRainbow|block": "vis lysdioder i regnbue",
