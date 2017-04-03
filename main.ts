@@ -63,15 +63,13 @@ namespace bitbot {
     export function motor(motor: Motor, speed: number): void {
         let forward = (speed >= 0);
 
-        if (speed > 100) {
-            speed = 100;
-        } else if (speed < -100) {
-            speed = 100;
-        } else if (speed < 0) {
-            speed = -speed;
+        if (speed > 1023) {
+            speed = 1023;
+        } else if (speed < -1023) {
+            speed = 1023;
         }
 
-        let realSpeed = 0; // Math.round((speed * 1023) / 100);
+        let realSpeed = speed;
         if (!forward) {
             realSpeed = 1023 - realSpeed;
         }
