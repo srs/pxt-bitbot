@@ -133,7 +133,7 @@ namespace bitbot {
       *
       * @param rgb RGB color of the LED
       */
-    //% blockId="bitbot_neo_show_color" block="show color to %rgb=neopixel_colors"
+    //% blockId="bitbot_neo_show_color" block="show color %rgb=neopixel_colors"
     //% weight=80
     export function neoShowColor(rgb: number) {
         neo().showColor(rgb);
