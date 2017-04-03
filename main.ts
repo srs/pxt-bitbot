@@ -148,7 +148,7 @@ namespace bitbot {
      //% blockId="bitbot_neo_set_pixel_color" block="set pixel color at %offset|to %rgb=neopixel_colors"
      //% weight=80
     export function neoSetPixelColor(offset: number, rgb: number): void {
-      neo().setPixelRGB(offset, rgb);
+      neo().setPixelColor(offset, rgb);
     }
 
     /**
