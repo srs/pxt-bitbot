@@ -145,9 +145,9 @@ namespace bitbot {
       *
       * @param rgb RGB color of the LED
       */
-    //% blockId="bitbot_neo_show_color" block="show color %rgb=neopixel_colors"
+    //% blockId="bitbot_neo_set_color" block="set pixels to %rgb=neopixel_colors"
     //% weight=80
-    export function neoShowColor(rgb: number) {
+    export function neoSetColor(rgb: number) {
         neo().showColor(rgb);
     }
 
@@ -184,9 +184,9 @@ namespace bitbot {
     /**
       * Shows a rainbow pattern on all LEDs.
       */
-    //% blockId="bitbot_neo_show_rainbow" block="show led rainbow"
+    //% blockId="bitbot_neo_rainbow" block="set led rainbow"
     //% weight=70
-    export function neoShowRainbow(): void {
+    export function neoRainbow(): void {
         neo().showRainbow(1, 360);
     }
 
