@@ -18,5 +18,6 @@
   "bitbot.neoShowRainbow|block": "vis lysdioder i regnbue",
   "bitbot.neoShift|block": "skift lysdioder",
   "bitbot.neoRotate|block": "roter lysdioder",
-  "bitbot.neoBrightness|block": "sett styrke på lysdioder %brightness"
+  "bitbot.neoBrightness|block": "sett styrke på lysdioder %brightness",
+  "bitbot.sonar|block": "les sonar som %unit"
 }

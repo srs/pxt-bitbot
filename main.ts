@@ -40,6 +40,18 @@ namespace bitbot {
     }
 
     /**
+     * Ping unit for sesnor.
+     */
+    export enum PingUnit {
+        //% block="μs"
+        MicroSeconds,
+        //% block="cm"
+        Centimeters,
+        //% block="inches"
+        Inches
+    }
+
+    /**
      * Return a neo pixel strip.
      */
     //% blockId="bitbot_neo" block="neo strip"
@@ -145,10 +157,10 @@ namespace bitbot {
      * @param offset position of the NeoPixel in the strip
      * @param rgb RGB color of the LED
      */
-     //% blockId="bitbot_neo_set_pixel_color" block="set pixel color at %offset|to %rgb=neopixel_colors"
-     //% weight=80
+    //% blockId="bitbot_neo_set_pixel_color" block="set pixel color at %offset|to %rgb=neopixel_colors"
+    //% weight=80
     export function neoSetPixelColor(offset: number, rgb: number): void {
-      neo().setPixelColor(offset, rgb);
+        neo().setPixelColor(offset, rgb);
     }
 
     /**
@@ -207,26 +219,18 @@ namespace bitbot {
         neo().setBrigthness(brightness);
     }
 
-    export enum PingUnit {
-        //% block="μs"
-        MicroSeconds,
-        //% block="cm"
-        Centimeters,
-        //% block="inches"
-        Inches
-    }
-
     /**
-    * Read distance from sonar module connected to accessory connector
+    * Read distance from sonar module connected to accessory connector.
     *
-    * @param Set return value unit as Centimeter, Inces or MicroSeconds ( PingUnit enum)
+    * @param unit desired conversion unit
     */
-    //% blockId=sonar_ping block="Read sonar as %unit=PingUnit"
+    //% blockId="bitbot_sonar" block="read sonar as %unit"
+    //% weight=7
     export function sonar(unit: PingUnit): number {
         // send pulse
         let trig = DigitalPin.P15;
         let echo = DigitalPin.P15;
-        //let unit = PingUnit.Centimeters;
+
         let maxCmDistance = 500;
 
         pins.setPull(trig, PinPullMode.PullNone);
