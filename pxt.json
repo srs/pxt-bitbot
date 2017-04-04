@@ -1,6 +1,6 @@
 {
     "name": "bitbot",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "A BitBot package for pxt-microbit",
     "license": "Apache",
     "dependencies": {
