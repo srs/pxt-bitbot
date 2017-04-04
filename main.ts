@@ -206,4 +206,43 @@ namespace bitbot {
     export function neoBrightness(brightness: number): void {
         neo().setBrigthness(brightness);
     }
+
+    export enum PingUnit {
+        //% block="μs"
+        MicroSeconds,
+        //% block="cm"
+        Centimeters,
+        //% block="inches"
+        Inches
+    }
+
+    /**
+    * Read distance from sonar module connected to accessory connector
+    *
+    * @param Set return value unit as Centimeter, Inces or MicroSeconds ( PingUnit enum)
+    */
+    //% blockId=sonar_ping block="Read sonar as %unit=PingUnit"
+    export function sonar(unit: PingUnit): number {
+        // send pulse
+        let trig = DigitalPin.P15;
+        let echo = DigitalPin.P15;
+        //let unit = PingUnit.Centimeters;
+        let maxCmDistance = 500;
+
+        pins.setPull(trig, PinPullMode.PullNone);
+        pins.digitalWritePin(trig, 0);
+        control.waitMicros(2);
+        pins.digitalWritePin(trig, 1);
+        control.waitMicros(10);
+        pins.digitalWritePin(trig, 0);
+
+        // read pulse
+        let d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
+
+        switch (unit) {
+            case PingUnit.Centimeters: return d / 58;
+            case PingUnit.Inches: return d / 148;
+            default: return d;
+        }
+    }
 }
