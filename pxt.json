@@ -5,12 +5,12 @@
     "license": "Apache",
     "dependencies": {
         "core": "*",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.3.2"
+        "neopixel": "github:microsoft/pxt-neopixel#v0.3.2",
+        "bitbot": "file:../pxt-bitbot"
     },
     "files": [
         "README.md",
-        "main.ts",
-        "_locales/no/bitbot-strings.json"
+        "main.ts"
     ],
     "testFiles": [
         "tests.ts"

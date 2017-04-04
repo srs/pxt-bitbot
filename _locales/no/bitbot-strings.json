@@ -14,7 +14,7 @@
   "bitbot.neoShowColor|block": "vis farge %rgb=neopixel_colors",
   "bitbot.neoSetPixelColor|block": "vis lysdiode %offset|farge %rgb=neopixel_colors",
   "bitbot.neoShow|block": "vis lysdioder",
-  "bitbot.neoClear|block": "slå av lysdioder",
+  "bitbot.neoClear|block": "nullstill lysdioder",
   "bitbot.neoShowRainbow|block": "vis lysdioder i regnbue",
   "bitbot.neoShift|block": "skift lysdioder",
   "bitbot.neoRotate|block": "roter lysdioder",
