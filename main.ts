@@ -1,55 +1,55 @@
 
 /**
+  * Enumeration of motors.
+  */
+enum BBMotor {
+    //% block="left"
+    Left,
+    //% block="right"
+    Right,
+    //% block="all"
+    All
+}
+
+/**
+  * Enumeration of line sensors.
+  */
+enum BBLineSensor {
+    //% block="left"
+    Left,
+    //% block="right"
+    Right
+}
+
+/**
+  * Enumeration of light sensors.
+  */
+enum BBLightSensor {
+    //% block="left"
+    Left,
+    //% block="right"
+    Right
+}
+
+/**
+ * Ping unit for sesnor.
+ */
+enum BBPingUnit {
+    //% block="μs"
+    MicroSeconds,
+    //% block="cm"
+    Centimeters,
+    //% block="inches"
+    Inches
+}
+
+/**
  * Custom blocks
  */
 //% weight=10 color=#0fbc11 icon="\uf1b9"
 namespace bitbot {
 
     let neoStrip: neopixel.Strip;
-
-    /**
-      * Enumeration of motors.
-      */
-    export enum Motor {
-        //% block="left"
-        Left,
-        //% block="right"
-        Right,
-        //% block="all"
-        All
-    }
-
-    /**
-      * Enumeration of line sensors.
-      */
-    export enum LineSensor {
-        //% block="left"
-        Left,
-        //% block="right"
-        Right
-    }
-
-    /**
-      * Enumeration of light sensors.
-      */
-    export enum LightSensor {
-        //% block="left"
-        Left,
-        //% block="right"
-        Right
-    }
-
-    /**
-     * Ping unit for sesnor.
-     */
-    export enum PingUnit {
-        //% block="μs"
-        MicroSeconds,
-        //% block="cm"
-        Centimeters,
-        //% block="inches"
-        Inches
-    }
 
     /**
      * Return a neo pixel strip.
@@ -69,10 +69,10 @@ namespace bitbot {
       *
       * @param motor motor to drive.
       * @param speed speed of motor
-      //% weight=100
       */
     //% blockId="bitbot_motor" block="drive motor %motor|speed %speed"
-    export function motor(motor: Motor, speed: number): void {
+    //% weight=100
+    export function motor(motor: BBMotor, speed: number): void {
         let forward = (speed >= 0);
 
         if (speed > 1023) {
@@ -86,12 +86,12 @@ namespace bitbot {
             realSpeed = 1023 - realSpeed;
         }
 
-        if ((motor == Motor.Left) || (motor == Motor.All)) {
+        if ((motor == BBMotor.Left) || (motor == BBMotor.All)) {
             pins.analogWritePin(AnalogPin.P0, realSpeed);
             pins.digitalWritePin(DigitalPin.P8, forward ? 0 : 1);
         }
 
-        if ((motor == Motor.Right) || (motor == Motor.All)) {
+        if ((motor == BBMotor.Right) || (motor == BBMotor.All)) {
             pins.analogWritePin(AnalogPin.P1, realSpeed);
             pins.digitalWritePin(DigitalPin.P12, forward ? 0 : 1);
         }
@@ -115,8 +115,8 @@ namespace bitbot {
       */
     //% blockId="bitbot_read_line" block="read line sensor %sensor"
     //% weight=90
-    export function readLine(sensor: LineSensor): number {
-        if (sensor == LineSensor.Left) {
+    export function readLine(sensor: BBLineSensor): number {
+        if (sensor == BBLineSensor.Left) {
             return pins.digitalReadPin(DigitalPin.P11);
         } else {
             return pins.digitalReadPin(DigitalPin.P5);
@@ -130,8 +130,8 @@ namespace bitbot {
       */
     //% blockId="bitbot_read_light" block="read light sensor %sensor"
     //% weight=90
-    export function readLight(sensor: LightSensor): number {
-        if (sensor == LightSensor.Left) {
+    export function readLight(sensor: BBLightSensor): number {
+        if (sensor == BBLightSensor.Left) {
             pins.digitalWritePin(DigitalPin.P16, 0);
             return pins.analogReadPin(AnalogPin.P2);
         } else {
@@ -226,7 +226,7 @@ namespace bitbot {
     */
     //% blockId="bitbot_sonar" block="read sonar as %unit"
     //% weight=7
-    export function sonar(unit: PingUnit): number {
+    export function sonar(unit: BBPingUnit): number {
         // send pulse
         let trig = DigitalPin.P15;
         let echo = DigitalPin.P15;
@@ -244,8 +244,8 @@ namespace bitbot {
         let d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
 
         switch (unit) {
-            case PingUnit.Centimeters: return d / 58;
-            case PingUnit.Inches: return d / 148;
+            case BBPingUnit.Centimeters: return d / 58;
+            case BBPingUnit.Inches: return d / 148;
             default: return d;
         }
     }
