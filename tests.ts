@@ -31,7 +31,7 @@
   basic.showNumber(bitbot.sonar(BBPingUnit.Inches));
 
   // Show all leds
-  bitbot.neoShowColor(neopixel.colors(NeoPixelColors.Red));
+  bitbot.neoSetColor(neopixel.colors(NeoPixelColors.Red));
   bitbot.neoShow();
 
   // Clear all leds
@@ -43,16 +43,16 @@
   bitbot.neoShow();
 
   // Show led rainbow
-  bitbot.neoShowRainbow();
+  bitbot.neoRainbow();
   bitbot.neoShow();
 
   // Show led rainbow and shift
-  bitbot.neoShowRainbow();
+  bitbot.neoRainbow();
   bitbot.neoShift();
   bitbot.neoShow();
 
   // Show led rainbow and rotate
-  bitbot.neoShowRainbow();
+  bitbot.neoRainbow();
   bitbot.neoRotate();
   bitbot.neoShow();
 
