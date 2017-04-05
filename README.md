@@ -1,5 +1,8 @@
 # BitBot Package for Microsoft PXT
 
+[![Build Status](https://travis-ci.org/srs/pxt-bitbot.svg?branch=master)](https://travis-ci.org/srs/pxt-bitbot)
+[![GitHub release](https://img.shields.io/github/release/srs/pxt-bitbot.svg)]()
+
 This library provides a Microsoft PXT package for BitBot, see
 https://4tronix.co.uk/bitbot/.
 
