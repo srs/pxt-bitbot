@@ -1,0 +1,12 @@
+{
+  "name": "pxt-bitbot",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "pxt": "^0.3.0",
+    "pxt-microbit": "^0.9.76"
+  },
+  "scripts": {
+    "test": "pxt test"
+  }
+}
