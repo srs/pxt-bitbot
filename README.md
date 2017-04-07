@@ -11,7 +11,7 @@ https://4tronix.co.uk/bitbot/.
 Use `bitbot.motor(..)` to drive motor either forward or reverse. The value
 indicates speed and is between `-1023` to `1023`. Minus indicates reverse.
 
-```js
+```blocks
 // Drive 1000 ms forward
 bitbot.motor(BBMotor.All, 1023);
 basic.pause(1000);
@@ -31,7 +31,7 @@ basic.pause(1000);
 To use the buzzer, just use `bitbot.buzz(..)` function with either `1`
 (sound) or `0` (no-sound).
 
-```js
+```blocks
 // Buzz for 100 ms
 bitbot.buzz(1);
 basic.pause(100);
@@ -43,7 +43,7 @@ bitbot.buzz(0);
 The BitBot has two line-sensors: left and right. To read the value of the
 sensors, use `bitbot.readLine(..)` function.
 
-```js
+```blocks
 // Read left and right line sensor
 let left = bitbot.readLine(BBLineSensor.Left);
 let right = bitbot.readLine(BBLineSensor.Right);
@@ -53,7 +53,7 @@ let right = bitbot.readLine(BBLineSensor.Right);
 
 Light sensors can be read using `bitbot.readLight(..)` function.
 
-```js
+```blocks
 // Read left and right light sensor
 let left = bitbot.readLight(BBLightSensor.Left);
 let right = bitbot.readLight(BBLightSensor.Right);
@@ -64,7 +64,7 @@ let right = bitbot.readLight(BBLightSensor.Right);
 If you have mounted the optional sonar sensor for the BitBot you can
 also use the `bitbot.sonar(..)` function to read the distance to obstacles.
 
-```js
+```blocks
 // Read sonar values
 let v1 = bitbot.sonar(BBPingUnit.MicroSeconds);
 let v2 = bitbot.sonar(BBPingUnit.Centimeters);
@@ -76,7 +76,7 @@ let v3 = bitbot.sonar(BBPingUnit.Inches);
 The BitBot has 12 NeoPixels mounted. This library defines some helpers
 for using the NeoPixels.
 
-```js
+```blocks
 // Show all leds
 bitbot.neoSetColor(neopixel.colors(NeoPixelColors.Red));
 bitbot.neoShow();
