@@ -1,0 +1,23 @@
+{
+  "BBMotor.Left|block": "venstre",
+  "BBMotor.Right|block": "højre",
+  "BBMotor.All|block": "alle",
+  "BBLineSensor.Left|block": "venstre",
+  "BBLineSensor.Right|block": "højre",
+  "BBLightSensor.Left|block": "venstre",
+  "BBLightSensor.Right|block": "højre",
+  "bitbot.neo|block": "neo stripe",
+  "bitbot.motor|block": "kør motor %motor|hastighed %speed",
+  "bitbot.buzz|block": "buzz lyd %flag",
+  "bitbot.readLine|block": "læs linje-sensor %sensor",
+  "bitbot.readLight|block": "læs lys-sensor %sensor",
+  "bitbot.neoSetColor|block": "sæt lysdioder til %rgb=neopixel_colors",
+  "bitbot.neoSetPixelColor|block": "sæt lysdiode %offset|farve %rgb=neopixel_colors",
+  "bitbot.neoShow|block": "vis lysdioder",
+  "bitbot.neoClear|block": "nulstil lysdioder",
+  "bitbot.neoRainbow|block": "sæt lysdioder i regnbue",
+  "bitbot.neoShift|block": "skift lysdioder",
+  "bitbot.neoRotate|block": "roter lysdioder",
+  "bitbot.neoBrightness|block": "sæt styrke på lysdioder %brightness",
+  "bitbot.sonar|block": "læs sonar som %unit"
+}
