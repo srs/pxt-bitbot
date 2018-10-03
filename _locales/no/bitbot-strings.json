@@ -1,7 +1,7 @@
 {
   "BBMotor.Left|block": "venstre",
   "BBMotor.Right|block": "høyre",
-  "BBMotor.All|block": "alle",
+  "BBMotor.All|block": "begge",
   "BBLineSensor.Left|block": "venstre",
   "BBLineSensor.Right|block": "høyre",
   "BBLightSensor.Left|block": "venstre",
